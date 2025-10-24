@@ -1,63 +1,21 @@
 import { diff21 } from '../../app/Warmup1/diff21';
 
 describe('Warmup-1 > diff21', () => {
-  it('should return 2, if the value is 19', () => {
-    const result = diff21(19);
-    expect(result).toBe(2);
-  });
-
-  it('should return 11, if the the value is 10', () => {
-    const result = diff21(10);
-    expect(result).toBe(11);
-  });
-
-  it('should return 0, if the the value is 21', () => {
-    const result = diff21(21);
-    expect(result).toBe(0);
-  });
-
-  it('should return 2, if the the value is 22', () => {
-    const result = diff21(22);
-    expect(result).toBe(2);
-  });
-
-  it('should return 8, if the the value is 25', () => {
-    const result = diff21(25);
-    expect(result).toBe(8);
-  });
-
-  it('should return 18, if the the value is 30', () => {
-    const result = diff21(30);
-    expect(result).toBe(18);
-  });
-
-  it('should return 21, if the the value is 0', () => {
-    const result = diff21(0);
-    expect(result).toBe(21);
-  });
-
-  it('should return 20, if the the value is 1', () => {
-    const result = diff21(1);
-    expect(result).toBe(20);
-  });
-
-  it('should return 19, if the the value is 2', () => {
-    const result = diff21(2);
-    expect(result).toBe(19);
-  });
-
-  it('should return 22, if the the value is -1', () => {
-    const result = diff21(-1);
-    expect(result).toBe(22);
-  });
-
-  it('should return 23, if the the value is -2', () => {
-    const result = diff21(-2);
-    expect(result).toBe(23);
-  });
-
-  it('should return 58, if the the value is 50', () => {
-    const result = diff21(50);
-    expect(result).toBe(58);
+  it.each([
+    [2, 19],
+    [11, 10],
+    [0, 21],
+    [2, 22],
+    [8, 25],
+    [18, 30],
+    [21, 0],
+    [20, 1],
+    [19, 2],
+    [22, -1],
+    [23, -2],
+    [58, 50],
+  ])('should return %i when the value is %i', (expected, input) => {
+    const result = diff21(input);
+    expect(result).toBe(expected);
   });
 });

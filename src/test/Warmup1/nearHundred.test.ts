@@ -1,98 +1,28 @@
 import { nearHundred } from '../../app/Warmup1/nearHundred';
 
 describe('Warmup-1 > nearHundred', () => {
-  it('should return true, if the value is 93', () => {
-    const result = nearHundred(93);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return true, if the value is 90', () => {
-    const result = nearHundred(90);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return false, if the value is 89', () => {
-    const result = nearHundred(89);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return true, if the value is 110', () => {
-    const result = nearHundred(110);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return false, if the value is 111', () => {
-    const result = nearHundred(111);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return false, if the value is 121', () => {
-    const result = nearHundred(121);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return false, if the value is -101', () => {
-    const result = nearHundred(-101);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return false, if the value is -209', () => {
-    const result = nearHundred(-209);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return true, if the value is 190', () => {
-    const result = nearHundred(190);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return true, if the value is 209', () => {
-    const result = nearHundred(209);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return false, if the value is 0', () => {
-    const result = nearHundred(0);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return false, if the value is 5', () => {
-    const result = nearHundred(5);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return false, if the value is -50', () => {
-    const result = nearHundred(-50);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return true, if the value is 191', () => {
-    const result = nearHundred(191);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return false, if the value is 189', () => {
-    const result = nearHundred(189);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return true, if the value is 200', () => {
-    const result = nearHundred(200);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return true, if the value is 210', () => {
-    const result = nearHundred(210);
-    expect(result).toBeTruthy();
-  });
-
-  it('should return false, if the value is 211', () => {
-    const result = nearHundred(211);
-    expect(result).toBeFalsy();
-  });
-
-  it('should return false, if the value is 290', () => {
-    const result = nearHundred(290);
-    expect(result).toBeFalsy();
+  it.each([
+    [true, 93],
+    [true, 90],
+    [false, 89],
+    [true, 110],
+    [false, 111],
+    [false, 121],
+    [false, -101],
+    [false, -209],
+    [true, 190],
+    [true, 209],
+    [false, 0],
+    [false, 5],
+    [false, -50],
+    [true, 191],
+    [false, 189],
+    [true, 200],
+    [true, 210],
+    [false, 211],
+    [false, 290],
+  ])('should return %s, if the value is %i', (expected, input) => {
+    const result = nearHundred(input);
+    expect(result).toBe(expected);
   });
 });
