@@ -1,6 +1,6 @@
 import { sumDouble } from '../../app/Warmup1/sumDouble';
 
-describe('sumDouble', () => {
+describe('Warmup-1 > sumDouble', () => {
   it('should return 3, adding 1 and 2', () => {
     const result = sumDouble(1, 2);
     expect(result).toBe(3);

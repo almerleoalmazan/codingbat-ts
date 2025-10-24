@@ -1,6 +1,6 @@
-import { diff21 } from '../app/Warmup1/diff21';
+import { diff21 } from '../../app/Warmup1/diff21';
 
-describe('diff21', () => {
+describe('Warmup-1 > diff21', () => {
   it('should return 2, if the value is 19', () => {
     const result = diff21(19);
     expect(result).toBe(2);

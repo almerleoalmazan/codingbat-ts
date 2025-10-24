@@ -1,6 +1,6 @@
-import { parrotTrouble } from '../app/Warmup1/parrotTrouble';
+import { parrotTrouble } from '../../app/Warmup1/parrotTrouble';
 
-describe('parrotTrouble', () => {
+describe('Warmup-1 > parrotTrouble', () => {
   it('should return true, if talking and hour is 6', () => {
     const result = parrotTrouble(true, 6);
     expect(result).toBeTruthy();
