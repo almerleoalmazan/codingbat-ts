@@ -1,6 +1,6 @@
 import { missingChar } from '../../app/Warmup1/missingChar';
 
-describe('Warmup-1 missingChar', () => {
+describe('Warmup-1 > missingChar', () => {
   it.each([
     ['ktten', 'kitten', 1],
     ['itten', 'kitten', 0],
