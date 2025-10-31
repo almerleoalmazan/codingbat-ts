@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "types": ["jest", "node"],
     "esModuleInterop": true
-  }
+  },
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
+  "exclude": ["node_modules", "dist"]
 }
