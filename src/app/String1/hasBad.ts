@@ -8,9 +8,11 @@
  * hasBad("xxbadxx") → false
  */
 export function hasBad(str: string): boolean {
-  if (str.length >= 3) {
-    return str.substring(0, 3) === 'bad' || str.substring(1, 4) === 'bad';
-  }
+  let indexOne = 1;
+  let indexZero = 0;
 
-  return false;
+  return (
+    str.indexOf('bad', indexZero) === indexZero ||
+    str.indexOf('bad', indexOne) === indexOne
+  );
 }
